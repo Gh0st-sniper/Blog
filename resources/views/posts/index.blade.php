@@ -8,6 +8,17 @@
 <body>
 
 <h1> Welcome to my blog </h1>
+
+@foreach($posts as $post)
+
+<h1><a href="{{ route('posts.show', $post->id )}}"> {{ $post->title }} </a> </h1>
+
+<br>
+<hr/>
+
+
+@endforeach
     
+<a href="/posts/create"> Create Post </a>
 </body>
 </html>
