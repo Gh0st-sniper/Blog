@@ -12,7 +12,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -37,14 +39,20 @@ class PostController extends Controller
         ]);
 
         $post = Post::create($incoming);
+
+        return redirect("/");
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show($id)
     {
         //
+
+        $post = Post::findorFail($id);
+
+        return view('posts.show', ['post' => $post ]);
     }
 
     /**
