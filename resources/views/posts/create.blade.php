@@ -10,6 +10,7 @@
 <h1> Create a post </h1>
 
 <form action="/posts" method="post">
+    @csrf
 
 <label for=""> Title </label>
 <input type="text" name="title" id=""><br>
