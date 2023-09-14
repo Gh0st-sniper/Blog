@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', PostController::class);
+
+Route::get('/posts/create', function () {
+
+    return view('posts.create');
+
+});
