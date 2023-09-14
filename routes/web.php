@@ -25,3 +25,4 @@ Route::get('/posts/create', function () {
 });
 
 Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/posts/{id}/edit', [PostController::class, 'edit']);
