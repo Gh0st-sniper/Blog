@@ -7,6 +7,8 @@
 </head>
 <body>
 
+<h1> Create a post </h1>
+
 <form action="/posts" method="post">
 
 <label for=""> Title </label>
