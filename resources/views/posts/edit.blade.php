@@ -19,7 +19,7 @@
 
         @endif
     </div>
-    <form method="post" action="/posts/{id}">
+    <form method="post" action="/posts/{{$post->id}} ">
         @csrf 
         @method('put')
         <div>
