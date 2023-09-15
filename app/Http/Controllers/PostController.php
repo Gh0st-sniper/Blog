@@ -72,6 +72,18 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+
+        $incoming = $request->validate([
+
+            'title' => 'required',
+            'body' => 'required',
+
+
+        ]);
+
+        $post->update($incoming);
+
+        return redirect('/');
     }
 
     /**
